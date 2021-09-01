@@ -9,3 +9,31 @@ body {
     margin: 0;
     font-family: Arial, Helvetica, sans-serif;
 }
+
+.container {
+    width: 500px;
+    height: 500px;
+}
+
+#animation {
+    width: 100px;
+    height: 100px;
+    background: red;
+    animation: moveRight 1s ease-in 2s infinite, colorChange 1s ease-in 2s infinite;
+}
+
+@keyframes moveRight {
+    0% {transform: translate(500px, 0px);}
+    25% {transform: translate(500px, 500px);}
+    50% {transform: translate(0px, 500px);}
+    75% {transform: translate(0px, 0px);}
+    100% {transform: translate(500px, 0px);}
+}
+
+@keyframes colorChange {
+    0% {background: green;}
+    25% {background: royalblue;}
+    50% {background: pink;}
+    75% {background: rebeccapurple;}
+    100% {background: tomato;}
+}
